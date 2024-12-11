@@ -1,6 +1,9 @@
+//Default device hostname:
+#define HOSTNAME "ESPAltherma"
+
 //Setup your credentials and mqtt info here:
 //only change the value between the " " leave the rest of the line untouched.
-#define WIFI_SSID "SSID"//**Your SSID here**
+#define WIFI_SSID "ssid"//**Your SSID here**
 #define WIFI_PWD "password"//**Your password here** leave empty if open (bad!)
 
 //Uncomment this to set a static IP instead of DHCP for the ESP (Separate by commas instead of dots)
@@ -10,11 +13,10 @@
 //#define WIFI_PRIMARY_DNS 8, 8, 8, 8     //A DNS address is needed, even if it's not used 
 //#define WIFI_SECONDARY_DNS 8, 8, 4, 4   //A DNS address is needed, even if it's not used
 
-#define MQTT_SERVER "192.168.1.4"//**IP address here of your MQTT server**
-#define MQTT_USERNAME ""//leave empty if not set (bad!)
-#define MQTT_PASSWORD ""//leave empty if not set (bad!)
+#define MQTT_SERVER "192.168.1.2"//**IP address here of your MQTT server**
+#define MQTT_USERNAME "mqttuser"//leave empty if not set (bad!)
+#define MQTT_PASSWORD "mqttpass"//leave empty if not set (bad!)
 #define MQTT_PORT 1883
-//#define MQTT_ENCRYPTED // uncomment if MQTT connection is encrypted via TLS
 
 #define FREQUENCY 30000 //query values every 30 sec
 
@@ -24,8 +26,13 @@
 #define TX_PIN    26// Pin connected to the RX pin of X10A
 #else 
 //Default GPIO PINs for Serial2:
+#if defined(WT32_ETH01)
+#define RX_PIN    5// Pin connected to the TX pin of X10A
+#define TX_PIN    17// Pin connected to the RX pin of X10A
+#else
 #define RX_PIN    16// Pin connected to the TX pin of X10A 
 #define TX_PIN    17// Pin connected to the RX pin of X10A
+#endif
 #endif
 
 #define PIN_THERM 0// Pin connected to the thermostat relay (normally open)
@@ -114,7 +121,7 @@
 //#include "def/Daikin Mini chiller(EWAA-EWYA D series 4-8kW).h"
 //#include "def/Daikin Mini chiller(EWAA-EWYA D series 9-16kW).h"
 //#include "def/Daikin Mini chiller(EWAQ-EWYQ B series 4-8kW).h"
-//#include "def/DEFAULT.h"
+#include "def/DEFAULT.h"
 //#include "def/EKHWET-BAV3(Multi DHW tank).h"
 
 //#include "def/PROTOCOL_S_ROTEX.h"
