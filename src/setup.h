@@ -15,7 +15,7 @@
 
 #define MQTT_SERVER "192.168.1.2"//**IP address here of your MQTT server**
 #define MQTT_USERNAME "mqttuser"//leave empty if not set (bad!)
-#define MQTT_PASSWORD "mqttpass"//leave empty if not set (bad!)
+#define MQTT_PASSWORD "M3ck3rtA"//leave empty if not set (bad!)
 #define MQTT_PORT 1883
 
 #define FREQUENCY 30000 //query values every 30 sec
