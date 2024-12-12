@@ -111,7 +111,7 @@
 //#include "def/Altherma(ERLA03 D EHFH-EHFZ DJ series 3kW).h"
 //#include "def/Altherma(Hybrid).h"
 //#include "def/Altherma(LT_CA_CB_04-08kW).h"
-//#include "def/Altherma(LT_CA_CB_11-16kW).h"
+#include "def/Altherma(LT_CA_CB_11-16kW).h"
 //#include "def/Altherma(LT_CB_04-08kW Bizone).h"
 //#include "def/Altherma(LT_CB_11-16kW Bizone).h"
 //#include "def/Altherma(LT_EBLQ-EBLQ-CA series 5-7kW Monobloc).h"
@@ -121,7 +121,7 @@
 //#include "def/Daikin Mini chiller(EWAA-EWYA D series 4-8kW).h"
 //#include "def/Daikin Mini chiller(EWAA-EWYA D series 9-16kW).h"
 //#include "def/Daikin Mini chiller(EWAQ-EWYQ B series 4-8kW).h"
-#include "def/DEFAULT.h"
+//#include "def/DEFAULT.h"
 //#include "def/EKHWET-BAV3(Multi DHW tank).h"
 
 //#include "def/PROTOCOL_S_ROTEX.h"
